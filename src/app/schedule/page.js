@@ -145,7 +145,7 @@ export default function SchedulePage() {
                             <button
                                 key={day}
                                 onClick={() => setActiveDay(day)}
-                                className="px-6 py-2.5 md:px-8 md:py-3 rounded-full text-xs md:text-sm font-bold uppercase tracking-widest transition-all whitespace-nowrap"
+                                className="px-6 py-2.5 md:px-8 md:py-3 rounded-full text-xs md:text-sm font-bold uppercase tracking-widest transition-all cursor-pointer whitespace-nowrap"
                                 style={{
                                     fontFamily: "'Space Grotesk', sans-serif",
                                     backgroundColor:
