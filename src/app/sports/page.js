@@ -105,20 +105,20 @@ export default function SportsPage() {
             <div className="flex items-center gap-4 mb-4">
               <span className="w-12 h-1" style={{ backgroundColor: "#d2ff9a", display: "inline-block" }} />
               <span
-                className="tracking-[0.3em] uppercase text-sm"
+                className="tracking-[0.3em] uppercase text-xs text-center sm:text-left"
                 style={{ fontFamily: "'Space Grotesk', sans-serif", color: "#d2ff9a" }}
               >
                 Season 2026
               </span>
             </div>
             <h1
-              className="text-4xl md:text-5xl lg:text-6xl font-black italic tracking-tighter uppercase mb-6 leading-none"
+              className="text-3xl md:text-4xl lg:text-5xl font-black italic tracking-tighter uppercase mb-4 sm:mb-6 leading-none"
               style={{ fontFamily: "'Lexend', sans-serif" }}
             >
               Select Your{" "}
               <span style={{ color: "#d2ff9a" }}>Battleground</span>
             </h1>
-            <p className="max-w-2xl text-lg leading-relaxed" style={{ color: "#a9abab" }}>
+            <p className="max-w-2xl text-sm sm:text-base leading-relaxed" style={{ color: "#a9abab" }}>
               Push your limits in the ultimate collegiate athletic showcase. High intensity, neon-fueled competition across 6 premier disciplines.
             </p>
           </header>
