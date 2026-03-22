@@ -99,7 +99,7 @@ export default function SportsPage() {
           />
         </div>
 
-        <div className="max-w-screen-2xl mx-auto px-8 py-16 relative z-10">
+        <div className="max-w-screen-2xl mx-auto px-4 md:px-8 py-10 md:py-16 relative z-10">
           {/* Header */}
           <header className="mb-20">
             <div className="flex items-center gap-4 mb-4">
@@ -112,7 +112,7 @@ export default function SportsPage() {
               </span>
             </div>
             <h1
-              className="text-6xl md:text-8xl font-black italic tracking-tighter uppercase mb-6 leading-none"
+              className="text-4xl md:text-5xl lg:text-6xl font-black italic tracking-tighter uppercase mb-6 leading-none"
               style={{ fontFamily: "'Lexend', sans-serif" }}
             >
               Select Your{" "}
@@ -124,39 +124,39 @@ export default function SportsPage() {
           </header>
 
           {/* Sports Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6">
             {sports.map(({ id, title, category, accentColor, img }) => {
               return (
                 <div
                   key={id}
                   className="group relative overflow-hidden rounded-xl transition-all duration-500 hover:-translate-y-2"
-                  style={{ backgroundColor: "#111414", aspectRatio: "4/5" }}
+                  style={{ backgroundColor: "#111414", aspectRatio: "3/4" }}
                 >
                   <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                     style={{ backgroundImage: `url('${img}')` }}
                   />
                   <div className="absolute inset-0 kinetic-overlay" />
-                  <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                    <div className="flex flex-col mb-4">
+                  <div className="absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-end">
+                    <div className="flex flex-col mb-2 sm:mb-4">
                       <span
-                        className="text-sm font-bold uppercase mb-2"
+                        className="text-[10px] sm:text-xs font-bold uppercase mb-1 sm:mb-2"
                         style={{ fontFamily: "'Space Grotesk', sans-serif", color: accentColor }}
                       >
                         {category}
                       </span>
                       <h3
-                        className="text-3xl font-black italic tracking-tighter uppercase text-white leading-tight"
+                        className="text-base sm:text-xl md:text-2xl font-black italic tracking-tighter uppercase text-white leading-tight"
                         style={{ fontFamily: "'Lexend', sans-serif" }}
                       >
                         {title}
                       </h3>
                     </div>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="flex flex-col gap-2 sm:gap-4">
                       <RulesModal sportTitle={title} color={accentColor} />
                       <Link
                         href={`/registration?sport=${id}`}
-                        className="py-3 px-4 rounded-md font-bold uppercase text-xs tracking-widest text-center transition-all active:scale-95 flex items-center justify-center"
+                        className="py-1.5 sm:py-2 px-2 sm:px-3 rounded-md font-bold uppercase text-[10px] sm:text-xs tracking-widest text-center transition-all active:scale-95 flex items-center justify-center w-full"
                         style={{
                           backgroundColor: accentColor,
                           color: "#3d6500",
@@ -176,7 +176,7 @@ export default function SportsPage() {
           {/* Stats Bento */}
           <section className="mt-32 grid grid-cols-1 lg:grid-cols-12 gap-6">
             <div
-              className="lg:col-span-8 rounded-xl p-10 relative overflow-hidden"
+              className="lg:col-span-8 rounded-xl p-6 sm:p-10 relative overflow-hidden"
               style={{ backgroundColor: "#1c2020" }}
             >
               <div className="absolute top-0 right-0 p-4 opacity-10">
@@ -186,7 +186,7 @@ export default function SportsPage() {
               </div>
               <div className="relative z-10">
                 <h2
-                  className="text-4xl font-black italic tracking-tighter uppercase mb-8"
+                  className="text-2xl sm:text-3xl font-black italic tracking-tighter uppercase mb-6 sm:mb-8"
                   style={{ fontFamily: "'Lexend', sans-serif" }}
                 >
                   Championship Standings
@@ -206,14 +206,14 @@ export default function SportsPage() {
                     >
                       <div className="flex items-center gap-6">
                         <span
-                          className="text-2xl font-bold"
+                          className="text-lg sm:text-xl font-bold"
                           style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                         >
                           {rank}
                         </span>
                         <div>
                           <p
-                            className="font-bold text-lg uppercase"
+                            className="font-bold text-sm sm:text-base uppercase"
                             style={{ fontFamily: "'Lexend', sans-serif" }}
                           >
                             {name}
@@ -242,13 +242,13 @@ export default function SportsPage() {
             </div>
 
             <div
-              className="lg:col-span-4 rounded-xl p-10 flex flex-col justify-between"
+              className="lg:col-span-4 rounded-xl p-6 sm:p-10 flex flex-col justify-between"
               style={{ backgroundColor: "#d2ff9a", color: "#3d6500" }}
             >
               <div>
                 <span className="material-symbols-outlined text-5xl mb-6 block">bolt</span>
                 <h3
-                  className="text-3xl font-black italic tracking-tighter uppercase leading-tight mb-4"
+                  className="text-2xl font-black italic tracking-tighter uppercase leading-tight mb-4"
                   style={{ fontFamily: "'Lexend', sans-serif" }}
                 >
                   Ready to make history?

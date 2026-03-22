@@ -305,7 +305,7 @@ export default function HomePage() {
                     </Link>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 h-[600px] md:h-[700px] lg:h-[800px]">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 h-[400px] md:h-[500px] lg:h-[600px]">
                     {/* Football - Large Feature */}
                     <div
                         className="md:col-span-8 group relative overflow-hidden rounded-xl border h-full"
@@ -338,7 +338,7 @@ export default function HomePage() {
                                 Most Popular
                             </span>
                             <h3
-                                className="text-5xl md:text-7xl lg:text-8xl font-black text-white italic uppercase leading-none mb-3 md:mb-4 group-hover:text-[#d2ff9a] transition-colors"
+                                className="text-4xl md:text-5xl lg:text-7xl font-black text-white italic uppercase leading-none mb-3 md:mb-4 group-hover:text-[#d2ff9a] transition-colors"
                                 style={{ fontFamily: "'Lexend', sans-serif" }}
                             >
                                 Football
