@@ -1,26 +1,128 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* ── Custom Colors ── */
+  --color-primary: #d2ff9a;
+  --color-primary-dim: #97ee00;
+  --color-primary-fixed: #a2fe0f;
+  --color-primary-fixed-dim: #97ee00;
+  --color-primary-container: #9ffb06;
+  --color-on-primary: #3d6500;
+  --color-on-primary-fixed: #2b4900;
+  --color-on-primary-fixed-variant: #3f6800;
+  --color-on-primary-container: #375b00;
+  --color-inverse-primary: #416a00;
+
+  --color-secondary: #00e3fd;
+  --color-secondary-dim: #00d4ec;
+  --color-secondary-fixed: #26e6ff;
+  --color-secondary-fixed-dim: #00d7f0;
+  --color-secondary-container: #006875;
+  --color-on-secondary: #004d57;
+  --color-on-secondary-fixed: #003a42;
+  --color-on-secondary-fixed-variant: #005964;
+  --color-on-secondary-container: #e8fbff;
+
+  --color-tertiary: #ff833f;
+  --color-tertiary-dim: #ff7520;
+  --color-tertiary-fixed: #ff955e;
+  --color-tertiary-fixed-dim: #ff7f36;
+  --color-tertiary-container: #fd6c00;
+  --color-on-tertiary: #481900;
+  --color-on-tertiary-fixed: #2f0e00;
+  --color-on-tertiary-fixed-variant: #642600;
+  --color-on-tertiary-container: #321000;
+
+  --color-background: #0c0f0f;
+  --color-on-background: #edeeed;
+
+  --color-surface: #0c0f0f;
+  --color-surface-dim: #0c0f0f;
+  --color-surface-bright: #282d2d;
+  --color-surface-variant: #222727;
+  --color-surface-tint: #d2ff9a;
+  --color-surface-container-lowest: #000000;
+  --color-surface-container-low: #111414;
+  --color-surface-container: #171a1a;
+  --color-surface-container-high: #1c2020;
+  --color-surface-container-highest: #222727;
+  --color-on-surface: #edeeed;
+  --color-on-surface-variant: #a9abab;
+  --color-inverse-surface: #f8faf9;
+  --color-inverse-on-surface: #535655;
+
+  --color-outline: #737676;
+  --color-outline-variant: #464848;
+
+  --color-error: #ff7351;
+  --color-error-dim: #d53d18;
+  --color-error-container: #b92902;
+  --color-on-error: #450900;
+  --color-on-error-container: #ffd2c8;
+
+  /* ── Custom Fonts ── */
+  --font-headline: "Lexend", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Space Grotesk", sans-serif;
+
+  /* ── Border Radius ── */
+  --radius-DEFAULT: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+
+  /* ── Animations ── */
+  --animate-marquee: marquee 30s linear infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Neon / glow helpers */
+.neon-glow-primary {
+  box-shadow: 0 0 20px rgba(210, 255, 154, 0.2);
+}
+.text-glow {
+  text-shadow: 0 0 15px rgba(210, 255, 154, 0.5);
+}
+.neon-glow-text {
+  text-shadow: 0 0 15px rgba(210, 255, 154, 0.6);
+}
+
+/* Background helpers */
+.kinetic-bg {
+  background: radial-gradient(circle at 50% 50%, rgba(210, 255, 154, 0.05) 0%, rgba(12, 15, 15, 1) 100%);
+}
+.kinetic-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
+}
+.stadium-glow {
+  background: radial-gradient(circle at center, rgba(210, 255, 154, 0.05) 0%, transparent 70%);
+}
+.bg-stadium {
+  background-image: radial-gradient(circle at 50% -20%, #1c2020 0%, #0c0f0f 70%);
+}
+.bg-grid {
+  background-image: linear-gradient(to right, #ffffff05 1px, transparent 1px),
+                    linear-gradient(to bottom, #ffffff05 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.asymmetric-cut {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+.neon-glow-focus:focus-within {
+  box-shadow: 0 0 15px rgba(210, 255, 154, 0.3);
+}
+
+/* Selection */
+::selection {
+  background-color: #d2ff9a;
+  color: #3d6500;
 }
