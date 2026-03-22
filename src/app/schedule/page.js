@@ -132,10 +132,14 @@ export default function SchedulePage() {
 
                 {/* Day Selectors (Sticky Tabs) */}
                 <div className="sticky top-15 md:top-18.25 z-40 bg-[#0c0f0f]/90 backdrop-blur-md border-b border-white/10 py-3 md:py-4">
-                    <style dangerouslySetInlineStyle={{__html: `
+                    <style
+                        dangerouslySetInnerHTML={{
+                            __html: `
                         .hide-scroll::-webkit-scrollbar { display: none !important; }
                         .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
-                    `}} />
+                    `,
+                        }}
+                    />
                     <div className="max-w-screen-2xl mx-auto px-4 md:px-8 flex gap-3 md:gap-4 overflow-x-auto justify-start md:justify-center no-scrollbar hide-scroll">
                         {days.map((day) => (
                             <button
