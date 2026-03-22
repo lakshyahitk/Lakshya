@@ -82,11 +82,12 @@ export default function HomePage() {
             {/* Hero Section */}
             <section className="relative min-h-[85vh] md:min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 pt-16 md:pt-20">
                 {/* Background image - LandingBG from public folder */}
-                <div
-                    className="absolute inset-0 z-0 bg-cover bg-center"
-                    style={{
-                        backgroundImage: "url('/LandingBG.png')",
-                    }}  
+                <Image
+                    src="/LandingBG.png"
+                    alt="Lakshya 2026 background"
+                    fill
+                    priority
+                    className="object-cover object-center z-0"
                 />
                 {/* Dark gradient overlay for text readability */}
                 <div

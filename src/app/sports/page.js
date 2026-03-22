@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import Image from "next/image";
 import RulesModal from "./RulesModal"; // We will create this
 
 const sports = [
@@ -148,10 +149,15 @@ export default function SportsPage() {
                   className="group relative overflow-hidden rounded-xl transition-all duration-500 hover:-translate-y-2"
                   style={{ backgroundColor: "#111414", aspectRatio: "3/4" }}
                 >
-                  <div
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                    style={{ backgroundImage: `url('${img}')` }}
-                  />
+                  <div className="absolute inset-0 overflow-hidden">
+                    <Image
+                      src={img}
+                      alt={title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    />
+                  </div>
                   <div className="absolute inset-0 kinetic-overlay" />
                   <div className="absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-end">
                     <div className="flex flex-col mb-2 sm:mb-4">

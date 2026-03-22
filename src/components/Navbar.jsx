@@ -81,12 +81,7 @@ export default function Navbar() {
                     >
                         Register Now
                     </Link>
-                    <span
-                        className="material-symbols-outlined text-2xl cursor-pointer transition-colors"
-                        style={{ color: "#edeeed" }}
-                    >
-                        account_circle
-                    </span>
+                    
                 </div>
 
                 {/* Hamburger Menu - Mobile */}
