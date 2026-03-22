@@ -8,7 +8,7 @@ export default function RulesModal({ sportTitle, color }) {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="py-3 px-4 rounded-md border font-bold uppercase text-xs tracking-widest text-white transition-all hover:bg-white/10"
+        className="py-1.5 sm:py-2 px-2 sm:px-3 rounded-md border font-bold uppercase text-[10px] sm:text-xs tracking-widest text-white transition-all hover:bg-white/10 w-full text-center flex items-center justify-center"
         style={{
           borderColor: color,
           color: color,
@@ -19,7 +19,7 @@ export default function RulesModal({ sportTitle, color }) {
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+        <div className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
           <div
             className="w-full max-w-lg p-8 rounded-xl border relative shadow-2xl"
             style={{
@@ -35,7 +35,7 @@ export default function RulesModal({ sportTitle, color }) {
             </button>
             
             <h2
-              className="text-3xl font-black italic tracking-tighter uppercase mb-6"
+              className="text-2xl font-black italic tracking-tighter uppercase mb-6"
               style={{ fontFamily: "'Lexend', sans-serif", color: color }}
             >
               {sportTitle} Rules
