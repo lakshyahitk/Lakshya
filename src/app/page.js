@@ -100,13 +100,13 @@ export default function HomePage() {
                 <div className="relative z-10 text-center space-y-4 md:space-y-6">
                     <div className="flex items-center justify-center gap-2 mb-2 md:mb-4 px-4">
                         <span
-                            className="tracking-widest uppercase text-[10px] md:text-sm font-bold text-center"
+                            className="tracking-widest uppercase text-[10px] md:text-lg font-bold text-center"
                             style={{
                                 fontFamily: "'Space Grotesk', sans-serif",
                                 color: "#00e3fd",
                             }}
                         >
-                            Heritage Institute of Technology presents
+                            Heritage Institute of Technology
                         </span>
                     </div>
 
