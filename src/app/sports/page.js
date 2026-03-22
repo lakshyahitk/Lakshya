@@ -77,7 +77,7 @@ const sports = [
 ];
 
 export const metadata = {
-  title: "Sports | NEON ARENA",
+  title: "Sports | LAKSHYA",
   description: "Select your battleground from 6 premier sports disciplines.",
 };
 
