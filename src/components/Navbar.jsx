@@ -7,8 +7,6 @@ const navLinks = [
     { label: "Home", href: "/" },
     { label: "Sports", href: "/sports" },
     { label: "Schedule", href: "/schedule" },
-    { label: "Results", href: "/results" },
-    { label: "Register", href: "/registration" },
 ];
 
 export default function Navbar() {
